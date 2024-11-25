@@ -62,7 +62,7 @@ button:hover {
 	width: 100px;
 	height: 100px;
 	text-indent: -9999px;
-	background: url(../images/arrow.png) no-repeat 0 0;
+	background: url(./images/arrow.png) no-repeat 0 0;
 	background-size: cover;
 	opacity: 0.8;
 	border-radius: 40px;
