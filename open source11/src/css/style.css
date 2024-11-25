@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, table, dl, dd {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+ul, ol {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+	vertical-align: top;
+	border: none;
+}
+body {
+	line-height: 1;
+	font-family:  "Noto Sans KR", sans-serif;
+	font-size: 1em;
+}
+
+/* header */
+#header .main_slider {
+	position: relative;
+	height: 100vh;
+	overflow-x: hidden;
+}
+#header .main_slider .swiper-container {
+	width: 100%;
+	height: 100%;
+}
+#header .main_slider .swiper-container .swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	text-align: center;
+	font-size: 1.125em;
+	background-color: #fff;
+}
+#header .main_slider .swiper-container .swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transform: scale(1.2);
+	transition: transform 2.5s;
+}
+#header .main_slider .swiper-container .swiper-slide.swiper-slide-active img {
+	transform: scale(1);
+}
+#header .main_slider .account {
+	position: absolute;
+	left: 50%;
+	bottom: 8%;
+	color: #fff;
+	z-index: 1000;
+	transform: translateX(-500px);
+}
+#header .main_slider .account .current {
+	font-weight: 600;
+}
+#header .main_slider .swiper-container .swiper-slide .text_box {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 100;
+	transform: translate(-50%,-50%);
+}
+#header .main_slider .swiper-container .swiper-slide .text_box span {
+	font-size: 2.75em;
+	font-weight: 600;
+	color: #fff;
+	opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 0.5s, transform 0.8s;
+	transition-delay: 0s;
+}
+#header .main_slider .swiper-container .swiper-slide .text_box p {
+	margin-top: 10px;
+	line-height: 1.6;
+	white-space: nowrap;
+	font-size: 1em;
+	color: #fff;
+	opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 0.5s, transform 0.8s;
+	transition-delay: 0.4s;
+}
+#header .main_slider .swiper-container .swiper-slide .text_box a {
+	display: inline-block;
+	margin-top: 60px;
+	padding: 0 30px;
+	line-height: 45px;
+	font-size: 0.875em;
+	background-color: #6fba2c;
+	color: #fff;
+	opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 0.5s, transform 0.8s;
+	transition-delay: 0.8s;
+}
+#header .main_slider .swiper-container .swiper-slide.swiper-slide-active .text_box span,
+#header .main_slider .swiper-container .swiper-slide.swiper-slide-active .text_box p,
+#header .main_slider .swiper-container .swiper-slide.swiper-slide-active .text_box a {
+	opacity: 1;
+	transform: translateY(0);
+}
+#header .main_slider .icon_scroll .icon_box {
+	position: absolute;
+	left: 50%;
+	bottom: 36px;
+	z-index: 1000;
+	margin-left: -15px;
+	animation-name: scroll;
+	animation-duration: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes scroll {
+	0% {
+		bottom: 36px;
+	}
+	100% {
+		bottom: 56px;
+	}
+}
