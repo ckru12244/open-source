@@ -43,7 +43,6 @@ function Container (){
 				)
 			}
 			<video id="my_video" src="video/seoul.mp4" autoPlay></video>
-			<video id="my_video" src={"video/"+videoList[0]}></video>
 		</div>
 	);
 }

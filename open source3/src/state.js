@@ -1,5 +1,8 @@
-export const data=[
-	[
+import { createSlice, configureStore } from "@reduxjs/toolkit";
+
+let product=createSlice({
+	name: "product",
+	initialState: [
 		{
 			idx: 0,
 			image: "product1.jpg",
@@ -31,9 +34,7 @@ export const data=[
 			sale: "45%",
 			dollar: "$12",
 			won: "16,743원"
-		}
-	],
-	[
+		},
 		{
 			idx: 0,
 			image: "product5.jpg",
@@ -67,4 +68,10 @@ export const data=[
 			won: "129,762원"
 		}
 	]
-]
+});
+
+export default configureStore({
+	reducer: {
+		product: product.reducer
+	}
+});
