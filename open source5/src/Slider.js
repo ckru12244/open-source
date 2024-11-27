@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide} from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper";
 import 'swiper/css';
+import 'swiper/css/autoplay';
 
 function Slider(props){
 	let image=props.p;
@@ -28,6 +29,7 @@ function Slider(props){
 					delay: 3000,
 					disableOnInteraction: false
 				}}
+				modules={[Autoplay]}
 				onSwiper={swiper => {				
 					setSwiper(swiper);
 				}}
