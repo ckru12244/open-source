@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide} from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import 'swiper/css';
-import 'swiper/css/pagination';
 
 function Slider(props){
 	let image=props.p;
@@ -26,10 +25,9 @@ function Slider(props){
 			<Swiper
 				className="viewer"
 				autoplay={{
-                    delay: 3000,
-                    disableOnInteraction: false
-                }}
-                modules={[Autoplay]} 
+					delay: 3000,
+					disableOnInteraction: false
+				}}
 				onSwiper={swiper => {				
 					setSwiper(swiper);
 				}}
